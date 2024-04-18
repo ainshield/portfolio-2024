@@ -19,7 +19,7 @@ const Footer = () => {
           <ul className="flex space-x-4">
             <li>
               <a
-                href="https://twitter.com/example"
+                href="https://www.linkedin.com/in/timothy-garcia/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -28,7 +28,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://github.com/example"
+                href="https://github.com/ainshield"
                 target="_blank"
                 rel="noopener noreferrer"
               >
