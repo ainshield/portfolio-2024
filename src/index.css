@@ -16,11 +16,11 @@
 
 /* global styles */
 body {
-  background: rgb(49, 152, 255);
+  background: #3198ff;
   background: linear-gradient(
     180deg,
-    rgba(49, 152, 255, 1) 0%,
-    rgba(230, 242, 255, 1) 37%
+    #3198ff 0%,
+    #e6f2ff 37%
   );
 }
 

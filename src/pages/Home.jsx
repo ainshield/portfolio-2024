@@ -4,18 +4,30 @@ import Footer from "../components/Footer";
 import EmailForm from "../components/EmailForm";
 import ProjectSection from "../components/ProjectSection";
 import TechStack from "../components/TechStack";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaTimes } from "react-icons/fa";
 import { Fab, Modal, Paper, Button } from "@mui/material";
 
 const Home = () => {
+  const downloadResume = () => {
+    // Replace 'https://example.com' with the URL you want to open
+    window.open(
+      "https://drive.google.com/uc?export=download&id=172jG3dQW4_4Vm3IgAFjwk6vwHm3owGXO",
+      "_blank"
+    );
+  };
+
+  const sendEmail = () => {
+    window.location.href = "mailto:timothy.garcia033@gmail.com";
+  };
+
   const [contentVisible, setContentVisible] = useState({
     hero: false,
     about: false,
     projects: false,
   });
 
-  const [openModal, setOpenModal] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
@@ -110,6 +122,7 @@ const Home = () => {
             }}
           >
             <button
+              onClick={downloadResume}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md"
               style={{ fontFamily: "Inter", fontWeight: 300 }}
             >
@@ -173,6 +186,7 @@ const Home = () => {
           </Paper>
         </section>
         <Fab
+          variant="extended"
           color="primary"
           aria-label="contact"
           style={{
@@ -184,23 +198,32 @@ const Home = () => {
             right: 20,
             zIndex: 1000,
           }}
-
-          onClick={() => setOpenModal(true)}
+          onClick={sendEmail} // Attach the sendEmail function to onClick
+          // onClick={() => setOpenModal(true)}
         >
-          <FaEnvelope  />
+          <FaEnvelope />
+          <span style={{ marginLeft: "0.5rem" }}>Contact</span>
         </Fab>
-        <Modal
+        {/* <Modal
           open={openModal}
           onClose={() => setOpenModal(false)}
           aria-labelledby="contact-modal"
           aria-describedby="contact-modal-description"
         >
-          <div className="max-w-md mx-auto">
-            <Paper elevation={3} sx={{ margin: "2rem" }} className="w-full">
+          <div className="max-w-3xl mx-auto">
+            <Paper elevation={3} sx={{ margin: "2rem"}} className="w-full">
+              <div className="flex justify-between items-center px-4 py-2 bg-blue-500" style={{ borderBottom: "1px solid #ccc"}}>
+                <h2 className="text-2xl text-white" style={{ textAlign: "center", }}>
+                  Contact Me
+                </h2>
+                <button onClick={() => setOpenModal(false)}>
+                  <FaTimes className="text-white"/>
+                </button>
+              </div>
               <EmailForm />
             </Paper>
           </div>
-        </Modal>
+        </Modal> */}
         <Footer />
       </div>
     </>

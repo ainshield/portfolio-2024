@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 
 const Navbar = () => {
+  const downloadResume = () => {
+    // Replace 'https://example.com' with the URL you want to open
+    window.open(
+      "https://drive.google.com/uc?export=download&id=172jG3dQW4_4Vm3IgAFjwk6vwHm3owGXO",
+      "_blank"
+    );
+  };
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -50,6 +57,7 @@ const Navbar = () => {
                   Projects
                 </a>
                 <button
+                  onClick={downloadResume}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md"
                   style={{ fontFamily: "Inter", fontWeight: 300 }}
                 >
