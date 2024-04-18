@@ -11,7 +11,7 @@ const Home = () => {
   const downloadResume = () => {
     // Replace 'https://example.com' with the URL you want to open
     window.open(
-      "https://drive.google.com/uc?export=download&id=172jG3dQW4_4Vm3IgAFjwk6vwHm3owGXO",
+      "https://drive.google.com/uc?export=download&id=1S3sTDX_dMl52xlHqJMbkth0AVwEMcuJi",
       "_blank"
     );
   };
